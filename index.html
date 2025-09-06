@@ -1,11 +1,273 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>潘榮成的GitHub io</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>您的姓名 - 個人簡歷</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* --- 全域樣式設定 --- */
+        body {
+            font-family: 'Helvetica Neue', Arial, '蘋方-繁', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        /* --- 標題與連結樣式 --- */
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            border-bottom: none;
+            font-size: 2.8em;
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* --- 頁首 (Header) --- */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: #7f8c8d;
+            border: none;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* 在小螢幕上換行 */
+            gap: 20px;
+        }
+
+        .contact-info li {
+            font-size: 1em;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+            color: #3498db;
+        }
+        
+        /* --- 區塊通用樣式 (Section) --- */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        /* --- 工作經歷 & 學歷 --- */
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            font-size: 1.2em;
+            color: #34495e;
+            border: none;
+            margin-bottom: 5px;
+        }
+        
+        .item-meta {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+        }
+        
+        /* --- 技能列表 --- */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills-list li {
+            background-color: #eaf2f8;
+            color: #2c3e50;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        /* --- 頁尾 (Footer) --- */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #95a5a6;
+        }
+
+        /* --- 響應式設計 (Responsive Design) --- */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            body {
+                font-size: 15px;
+            }
+        }
+
+    </style>
 </head>
 <body>
-  <h1>潘榮成的GitHub.io</h1>
+
+    <div class="container">
+
+        <header class="header">
+            <h1>您的姓名</h1>
+            <h2>您的專業職稱 (例如：前端工程師)</h2>
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li><i class="fas fa-phone"></i> (09) 1234-5678</li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/your-username" target="_blank">GitHub</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <section class="section">
+                <h2><i class="fas fa-user"></i> 個人簡介</h2>
+                <p>
+                    在這裡簡潔有力地介紹自己。例如：擁有五年以上網站開發經驗的軟體工程師，專長於 JavaScript 和 React。熱衷於打造高效能、高互動性的使用者介面，並具備良好的團隊合作與問題解決能力。
+                </p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-briefcase"></i> 工作經歷</h2>
+                <div class="experience-item">
+                    <h3>職位名稱 - 公司名稱</h3>
+                    <p class="item-meta">城市, 國家 | 2022 年 8 月 – 至今</p>
+                    <ul>
+                        <li>在這裡描述您在這份工作中的主要職責與成就。</li>
+                        <li>使用條列式，每點都以動詞開頭，量化您的成果。例如：優化了產品頁面的載入速度，提升了 30% 的效能。</li>
+                        <li>負責開發與維護公司核心產品的前端介面。</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>另一個職位名稱 - 另一間公司名稱</h3>
+                    <p class="item-meta">城市, 國家 | 2020 年 6 月 – 2022 年 7 月</p>
+                    <ul>
+                        <li>簡述您在此職位的貢獻與學習。</li>
+                        <li>參與了三個主要專案的開發，並協助導入新的開發流程。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> 學歷</h2>
+                <div class="education-item">
+                    <h3>學校名稱 - 主修科系, 學位</h3>
+                    <p class="item-meta">城市, 國家 | 2016 年 9 月 – 2020 年 6 月</p>
+                    <p>
+                        可以在這裡補充說明在學期間的特殊成就，例如：書卷獎、參與的專題或社團幹部經驗等。
+                    </p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2><i class="fas fa-cogs"></i> 專業技能</h2>
+                <ul class="skills-list">
+                    <li>HTML5</li>
+                    <li>CSS3 & Sass</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js</li>
+                    <li>Vue.js</li>
+                    <li>Node.js</li>
+                    <li>Git & GitHub</li>
+                    <li>UI/UX 設計</li>
+                    <li>專案管理</li>
+                    <li>問題解決</li>
+                    </ul>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-project-diagram"></i> 專案作品</h2>
+                <div class="experience-item">
+                    <h3><a href="您的專案連結" target="_blank">專案名稱一</a></h3>
+                    <p>
+                        簡要描述這個專案的目標、您使用的技術以及您在其中扮演的角色。可以說明專案解決了什麼問題或達成了什麼成果。
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h3><a href="您的專案連結" target="_blank">專案名稱二</a></h3>
+                    <p>
+                        這是一個使用 React 和 Firebase 開發的即時聊天應用程式，讓使用者可以進行一對一的線上溝通。我負責了前端介面開發與使用者認證流程。
+                    </p>
+                </div>
+            </section>
+
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 您的姓名. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
